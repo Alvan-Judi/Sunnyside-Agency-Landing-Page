@@ -173,10 +173,12 @@ img {
 /* HEADER */
 
 header {
-        height: 100vh;
         background-image: url('images/desktop/image-header.jpg');
+        height: 100vh;
+        background-attachment: fixed;
         background-position: center;
         background-size: cover ;
+        background-repeat: no-repeat;
         position: relative;
     }
 
