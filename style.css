@@ -175,7 +175,7 @@ img {
 header {
         background-image: url('images/desktop/image-header.jpg');
         height: 100vh;
-        background-attachment: fixed;
+        background-attachment: fixed;   
         background-position: center;
         background-size: cover ;
         background-repeat: no-repeat;
@@ -275,6 +275,14 @@ main a {
     grid-area: a;
 }
 
+.grid-a h1, .grid-a p, .grid-a a {
+    transition: transform 500ms;
+}
+
+.grid-a:hover h1, .grid-a:hover p, .grid-a:hover a {
+    transform: scale(1.1);
+}
+
 .grid-b {
     grid-area: b;
 }
@@ -291,6 +299,14 @@ grid-area: c;   }
 
 .grid-d {
 grid-area: d;   }
+
+.grid-d h1, .grid-d p, .grid-d a {
+    transition: transform 500ms;
+}
+
+.grid-d:hover h1, .grid-d:hover p, .grid-d:hover a {
+    transform: scale(1.1);
+}
 
     .grid-a, .grid-d {
         margin: var(--margin-textgrid);
@@ -347,13 +363,20 @@ h2:last-of-type {
     background-size: cover; 
 }
 
+.grid-e-background > h2, .grid-e-background  p {
+    transition: transform 500ms;
+}
+
+.grid-e-background:hover > h2, .grid-e-background:hover p {
+    transform: scale(1.2);
+} 
+
 .grid-f {
     grid-area: f; 
     text-align: center;
     font-weight: 700;
     color: var(--clr-photography-text);
 }
-
 
 
 .grid-f-background {
@@ -364,6 +387,15 @@ h2:last-of-type {
     background-repeat: no-repeat;
     background-size: cover; 
 }
+
+.grid-f-background > h2, .grid-f-background  p {
+    transition: transform 500ms;
+}
+
+.grid-f-background:hover > h2, .grid-f-background:hover p {
+    transform: scale(1.2);
+} 
+
 
             @media (max-width: 780px) {
 
@@ -405,15 +437,26 @@ h2:last-of-type {
     background-color: var(--clr-neutral-white);
 }
 
+/* .emily {
 
+} */
 
 .subgrid-h p {
     color: var(--clr-neutral-very-drk-greyish-blue);
     font-weight: 900;
 }
 
-.subgrid-h p:nth-of-type(1) {
+
+.subgrid-h:nth-of-type(1) {
     margin-top: 7rem;
+}
+.subgrid-h > div {
+transition: transform 500ms;
+}
+
+
+.subgrid-h > div:hover {
+    transform: scale(1.08);
 }
 
 .subgrid-h p:nth-of-type(2) {
