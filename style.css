@@ -274,14 +274,42 @@ main a {
 .grid-a {
     grid-area: a;
 }
+.grid-a-container {
+    position: relative;
+    width: max-content;
+}
 
-.grid-a h1, .grid-a p, .grid-a a {
+.link-learn-more {
     transition: transform 500ms;
 }
 
-.grid-a:hover h1, .grid-a:hover p, .grid-a:hover a {
+
+.link-learn-more::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0.3rem;
+    height: 0.6rem;
+    width: 100%;
+    background: var(--clr-soft-red);
+    border-radius: 1rem;
+    opacity: 0.3;
+    transition: opacity 700ms;
+    transform-style: left;
+}
+.grid-a:hover .link-learn-more::after {
+    opacity: 1;
+}
+
+.grid-a h1 {
+    transition: transform 500ms;
+}
+
+.grid-a:hover h1 {
     transform: scale(1.1);
 }
+
 
 .grid-b {
     grid-area: b;
@@ -300,13 +328,32 @@ grid-area: c;   }
 .grid-d {
 grid-area: d;   }
 
-.grid-d h1, .grid-d p, .grid-d a {
+.link-learn-more-d::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0.3rem;
+    height: 0.6rem;
+    width: 100%;
+    background: var(--clr-yellow);
+    border-radius: 1rem;
+    opacity: 0.3;
+    transition: opacity 700ms;
+    transform-style: left;
+}
+.grid-d:hover .link-learn-more-d::after {
+    opacity: 1;
+}
+
+.grid-d h1 {
     transition: transform 500ms;
 }
 
-.grid-d:hover h1, .grid-d:hover p, .grid-d:hover a {
+.grid-d:hover h1 {
     transform: scale(1.1);
 }
+
 
     .grid-a, .grid-d {
         margin: var(--margin-textgrid);
